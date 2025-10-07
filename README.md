@@ -3,8 +3,8 @@
 This repository will power the service-facing side of 28eme at https://28eme.ca. It complements the personal site at https://austinbjohnson.com by focusing on automation consulting, composite AI experiments, and case studies.
 
 ## Initial To-Do
-- [ ] Finalize site information architecture (Home, Services, Process, Experiments, Contact).
-- [ ] Draft hero copy and CTA aligned with the consulting offer.
+- [x] Finalize site information architecture (Home, Services, Process, Experiments, Contact).
+- [x] Draft hero copy and CTA aligned with the consulting offer.
 - [ ] Add visual identity elements that relate to the personal site while feeling distinct.
 - [ ] Connect GitHub Pages (`main` branch) and point the `28eme.ca` domain.
 - [ ] Link back to the personal site in navigation and footer.
