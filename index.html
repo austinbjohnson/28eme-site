@@ -158,55 +158,40 @@
       font-size: 1.1rem;
       line-height: 1;
     }
-    .stage-list {
+    .step-list {
+      counter-reset: step;
       list-style: none;
       margin: 0;
       padding: 0;
-      counter-reset: stage;
       display: grid;
       gap: 1rem;
     }
-    .stage-list li {
-      counter-increment: stage;
-      position: relative;
-      padding: 1.9rem 1.8rem 1.7rem 4.4rem;
-      border-radius: 1.4rem;
+    .step-list li {
+      counter-increment: step;
       border: 1px solid var(--border);
+      border-radius: 1.4rem;
+      padding: 1.4rem 1.6rem 1.3rem 3.4rem;
       background: rgba(12, 18, 26, 0.75);
+      position: relative;
       backdrop-filter: blur(9px);
     }
-    .stage-list li::before {
-      content: "0" counter(stage);
+    .step-list li::before {
+      content: counter(step, decimal-leading-zero);
       position: absolute;
-      left: 1.7rem;
-      top: 1.85rem;
+      left: 1.3rem;
+      top: 1.35rem;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.95rem;
       letter-spacing: 0.08em;
       color: var(--accent);
     }
-    .stage-list h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.28rem;
+    .step-list h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.22rem;
     }
-    .stage-list p {
-      margin: 0 0 0.8rem;
+    .step-list p {
+      margin: 0;
       color: var(--muted);
-    }
-    .split {
-      display: grid;
-      gap: 1.6rem;
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      align-items: start;
-    }
-    .note {
-      margin-top: 1.2rem;
-      padding: 1rem 1.2rem;
-      border-radius: 0.9rem;
-      border: 1px dashed var(--border);
-      color: var(--muted);
-      background: rgba(5, 7, 11, 0.6);
-      font-size: 0.9rem;
     }
     footer {
       padding: 1.5rem;
@@ -227,7 +212,7 @@
         flex: 1;
         justify-content: center;
       }
-      .stage-list li {
+      .step-list li {
         padding-left: 3.6rem;
       }
     }
@@ -238,7 +223,7 @@
     <div class="container">
       <span class="eyebrow">Automation consulting</span>
       <h1>Automation-first consulting for teams operationalizing composite AI.</h1>
-      <p class="lead">28eme is Austin Johnson’s studio for designing agents, orchestrating APIs, and documenting the operating playbooks that keep teams moving. Companion to the personal hub at <a href="https://austinbjohnson.com" target="_blank" rel="noopener">austinbjohnson.com</a>.</p>
+      <p class="lead">28eme is Austin Johnson’s studio for automation-first engagements that blend agents, APIs, and documentation. Companion to <a href="https://austinbjohnson.com" target="_blank" rel="noopener">austinbjohnson.com</a> for deeper context.</p>
       <div class="cta-group">
         <a class="cta" href="mailto:hello@28eme.com?subject=Start%20an%20automation%20engagement">Start a project</a>
         <a class="cta secondary" href="https://github.com/austinbjohnson" target="_blank" rel="noopener">Public experiments</a>
@@ -248,125 +233,85 @@
 
   <main>
     <div class="container">
-      <section id="services">
-        <h2>Engagement focus</h2>
-        <p class="section-lead">28eme partners with operations leaders, founders, and creative teams who need automation-first systems that keep pace with composite AI. Each engagement balances experimentation with documentation so the work keeps delivering after handoff.</p>
+      <section id="focus">
+        <h2>Where 28eme plugs in</h2>
+        <p class="section-lead">Lean builds with measurable impact—each scoped to your workflow and documented for the team that runs it next.</p>
         <div class="grid three">
           <article class="card service-card">
-            <h3>Composite AI in production</h3>
-            <p>Design multi-agent systems that combine LLMs, APIs, and human review so automations stay resilient.</p>
+            <h3>Composite AI builds</h3>
+            <p>Launch resilient agent + API automations without losing visibility.</p>
             <ul class="focus-list">
-              <li>Agent choreography mapped to the jobs-to-be-done you outline.</li>
-              <li>Fallbacks, observability, and audit trails built into every flow.</li>
+              <li>Orchestrations mapped to the jobs-to-be-done you outline.</li>
+              <li>Fallbacks and dashboards baked into every release.</li>
             </ul>
           </article>
           <article class="card service-card">
             <h3>Automation playbooks</h3>
-            <p>Codify the workflows that let your team ship without waiting on additional engineering cycles.</p>
+            <p>Codify workflows so ops can ship without waiting on extra engineering cycles.</p>
             <ul class="focus-list">
-              <li>Reusable prototypes across Zapier, Make, Airtable, and bespoke services.</li>
-              <li>Configuration notes, triggers, and maintenance cadence documented in plain language.</li>
+              <li>Reusable blueprints across Zapier, Make, Airtable, and bespoke services.</li>
+              <li>Plain-language runbooks with triggers and maintenance cadence.</li>
             </ul>
           </article>
           <article class="card service-card">
-            <h3>Documentation & handoff</h3>
-            <p>Every build ships with the artifacts you need to keep iterating—no black boxes left behind.</p>
+            <h3>Documentation & enablement</h3>
+            <p>Ship artifacts the team can maintain—nothing leaves as a black box.</p>
             <ul class="focus-list">
-              <li>Architecture maps, data flow diagrams, and dependency checklists.</li>
-              <li>Loom walkthroughs, runbooks, and a backlog of next bets.</li>
+              <li>Architecture maps, security notes, and dependency checklists.</li>
+              <li>Loom walkthroughs plus a next-step backlog.</li>
             </ul>
           </article>
         </div>
       </section>
 
       <section id="process">
-        <h2>How engagements run</h2>
-        <p class="section-lead">A lightweight, documented path keeps everyone aligned from the first mapping session to the final handoff.</p>
-        <ol class="stage-list">
+        <h2>How it runs</h2>
+        <p class="section-lead">A lightweight, documented path keeps everyone aligned and ships a working system in weeks, not quarters.</p>
+        <ol class="step-list">
           <li>
             <h3>Discover</h3>
-            <p>Clarity sessions to map the workflow, surface constraints, and lock the signals that prove success.</p>
-            <ul class="focus-list">
-              <li>Async intake followed by a working session around jobs-to-be-done.</li>
-              <li>Inventory of systems, data access, and approval gates.</li>
-            </ul>
+            <p>Async intake plus a 60-minute map that nails outcomes, data access, and guardrails.</p>
           </li>
           <li>
             <h3>Design</h3>
-            <p>Prototype agents and automations, stress-test data flows, and plan the governance story.</p>
-            <ul class="focus-list">
-              <li>Clickable or running prototypes for fast feedback.</li>
-              <li>Architecture notes covering models, triggers, and human-in-the-loop safeties.</li>
-            </ul>
+            <p>Rapid prototypes validate flows; architecture notes capture models, triggers, and safeties.</p>
           </li>
           <li>
             <h3>Deliver</h3>
-            <p>Implement, document, train, and iterate with built-in feedback loops before the final handoff.</p>
-            <ul class="focus-list">
-              <li>Enablement sessions and Loom walkthroughs for your team.</li>
-              <li>Runbooks, metrics snapshot, and backlog for the next release.</li>
-            </ul>
+            <p>Production deployment, enablement, and a runbook-backed backlog wrapped in Loom walkthroughs.</p>
           </li>
         </ol>
-        <div class="note">Weekly async status updates, Loom walkthroughs, and a shared workspace keep stakeholders in the loop without adding meeting overhead.</div>
-      </section>
-
-      <section id="experience">
-        <h2>Experience & approach</h2>
-        <div class="card">
-          <div class="split">
-            <div>
-              <p>Austin Johnson is an AI-native product manager and founder of 28eme. Years of shipping automation-first experiences at Zapier and inside his own studio shaped a problem-first, documentation-heavy approach. The goal is always the same: bend APIs, events, and agents so people feel less friction.</p>
-              <p>Every engagement maps the job-to-be-done, composes the right agents around it, and ships iteratively in public where possible. The craft shows up in the details—shared repos, transparent changelogs, and artifacts your team can maintain without outside help.</p>
-            </div>
-            <div>
-              <h3 style="margin-top:0;">Ideal collaborators</h3>
-              <ul class="focus-list">
-                <li>Operations teams building automation capacity without adding headcount.</li>
-                <li>Founders validating AI-native product bets before a full engineering build.</li>
-                <li>Studios exploring bespoke workflows that bridge no-code and engineering.</li>
-              </ul>
-              <h3>What you take with you</h3>
-              <ul class="focus-list">
-                <li>Documented architecture, API maps, and risk considerations.</li>
-                <li>Reusable automation playbooks with configuration notes.</li>
-                <li>Training assets and a next-step backlog to keep momentum.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section id="proof">
         <h2>Proof & experiments</h2>
         <div class="card">
-          <p class="section-lead" style="margin-bottom:1.4rem;">Case studies are anonymized until approvals land, but the patterns repeat: operational relief, faster shipping, and clarity around how automation supports the work.</p>
+          <p class="section-lead" style="margin-bottom:1.4rem;">Case studies stay private until approvals land—request a walkthrough for anonymized artifacts, metrics snapshots, and Loom tours.</p>
           <div class="grid two">
             <div>
-              <h3 style="margin-top:0;">Case studies in flight</h3>
+              <h3 style="margin-top:0;">Recent wins</h3>
               <ul class="focus-list">
-                <li>Support triage agents reducing manual routing across tooling silos.</li>
-                <li>Product operations automation syncing release notes across stacks.</li>
-                <li>Personal knowledge assistants documenting craft projects and routines.</li>
+                <li>Support triage agents reducing manual routing across stacks.</li>
+                <li>Product ops automations syncing releases without extra headcount.</li>
+                <li>Knowledge assistants documenting craft projects and routines.</li>
               </ul>
             </div>
             <div>
-              <h3 style="margin-top:0;">Public experiments</h3>
+              <h3 style="margin-top:0;">Who calls 28eme</h3>
               <ul class="focus-list">
-                <li>Composite agent prototypes across Zapier, Airtable, Notion, and custom APIs.</li>
-                <li>Automation dashboards for cyclists, readers, and makers—proving bespoke workflows scale.</li>
-                <li>Knowledge capture tooling with human-in-the-loop reviews for accountability.</li>
+                <li>Ops leaders spinning up automation capacity without adding headcount.</li>
+                <li>Founders validating AI-native products before a full engineering build.</li>
+                <li>Studios bridging no-code experiments with custom engineering.</li>
               </ul>
             </div>
           </div>
-          <div class="note">Request a walkthrough to see anonymized artifacts, Loom demos, and the metrics snapshot format used at handoff.</div>
         </div>
       </section>
 
       <section id="cta">
         <div class="card">
           <h2 style="margin-top:0;">Ready for the next build?</h2>
-          <p style="color:var(--muted);">Share your scenario and 28eme will outline a discovery path or scoped experiment within 48 hours.</p>
+          <p style="color:var(--muted);">Share your scenario and get a scoped experiment or discovery path within 48 hours.</p>
           <div class="cta-group" style="margin-top:1.6rem;">
             <a class="cta" href="mailto:hello@28eme.com?subject=Start%20an%20automation%20engagement">Start a project</a>
             <a class="cta secondary" href="https://github.com/austinbjohnson/28eme-site/tree/main/docs" target="_blank" rel="noopener">Browse the playbooks</a>
@@ -377,7 +322,7 @@
   </main>
 
   <footer>
-    <div class="container">&copy; <span id="year"></span> 28eme Studio. Connected brand: <a href="https://austinbjohnson.com" target="_blank" rel="noopener">AustinJohnson.com</a></div>
+    <div class="container">&copy; <span id="year"></span> 28eme Studio. Connected brand: <a href="https://austinbjohnson.com" target="_blank" rel="noopener">austinbjohnson.com</a></div>
     <div class="container" style="margin-top:0.3rem;font-size:0.75rem;color:var(--muted);">Built on GitHub Pages with Codex · Last updated <span id="last-updated"></span></div>
   </footer>
 
