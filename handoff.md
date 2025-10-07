@@ -7,7 +7,7 @@ This repo follows the shared workflow documented at the websites root.
 
 ## Site-Specific Notes
 
-- [x] After next content pass, log the verified `28eme.ca` / `.com` DNS status in `docs/log-oct-2025`.
-- [x] Flesh out the service/process narrative and iterate on the production layout.
-- [x] Adapt the "About Austin" story into a consulting-focused portfolio with sections for experience snapshots, offer, and proof points.
-- [ ] Re-check `https://www.28eme.com` once Squarespace forwarding finishes and update the DNS log with the result.
+- [x] Rework the hero/about story to mirror the refreshed personal-site narrative for consulting prospects. (`feature/condense-landing`)
+- [x] Outline services, proof points, and experiments in a compressed layout to halve the page copy.
+- [ ] Log the next DNS verification pass in `docs/log-oct-2025` after changes go live.
+- [ ] Share the condensed page for tone/clarity feedback and capture reactions in the shared session notes.
