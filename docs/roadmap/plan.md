@@ -1,9 +1,9 @@
 # 28eme.ca Launch Plan
 
-**Status:** draft  
-**Owner:** Austin Johnson  
-**Last updated:** 2025-02-14  
-**Next review:** 2025-03-15
+**Status:** active
+**Owner:** Austin Johnson
+**Last updated:** 2025-12-20
+**Next review:** 2026-01-15
 
 ## Objectives
 - Position 28eme as the consulting arm for automation-first and composite AI engagements.
@@ -18,10 +18,10 @@
 5. **Contact** — direct email CTA, optionally Calendly/time booking.
 
 ## Milestones
-- ☐ Draft narrative and CTA copy (content/positioning.md).
-- ☐ Design wireframe or layout reference.
-- ☐ Build static page(s) in `src/` and verify locally.
-- ☐ Enable GitHub Pages + custom domain.
+- ✓ Draft narrative and CTA copy (content/positioning.md).
+- ✓ Design wireframe or layout reference.
+- ✓ Build static page(s) in `src/` and verify locally.
+- ✓ Enable GitHub Pages + custom domain.
 - ☐ Publish launch note on personal site linking to 28eme.ca.
 
 ## Dependencies
