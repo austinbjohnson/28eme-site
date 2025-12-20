@@ -1,0 +1,5 @@
+# robots.txt for 28eme.ca
+User-agent: *
+Allow: /
+
+Sitemap: https://28eme.ca/sitemap.xml
