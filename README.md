@@ -7,7 +7,7 @@ This repository will power the service-facing side of 28eme at https://28eme.ca.
 - [x] Draft hero copy and CTA aligned with the consulting offer.
 - [ ] Add visual identity elements that relate to the personal site while feeling distinct.
 - [ ] Connect GitHub Pages (`main` branch) and point the `28eme.ca` domain.
-- [ ] Link back to the personal site in navigation and footer.
+- [x] Link back to the personal site in navigation and footer.
 
 ## Getting Started
 1. `git init` (after the GitHub repo is created, `git remote add origin git@github.com:austinbjohnson/28eme-site.git`).
