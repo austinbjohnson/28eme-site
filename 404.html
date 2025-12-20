@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found — 28eme Studio</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#04070a">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2304070a'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='700' font-family='sans-serif' text-anchor='middle' fill='%236cf3c8'%3E28%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #04070a;
+      --fg: #f4f7fb;
+      --muted: rgba(244, 247, 251, 0.72);
+      --accent: #6cf3c8;
+      --border: rgba(255, 255, 255, 0.14);
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(108, 243, 200, 0.18), transparent 55%),
+                  radial-gradient(circle at 110% 10%, rgba(90, 163, 243, 0.2), transparent 60%),
+                  var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 42rem;
+      text-align: center;
+    }
+    .error-code {
+      font-size: clamp(6rem, 15vw, 10rem);
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+      background: linear-gradient(135deg, var(--accent), rgba(108, 243, 200, 0.6));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    h1 {
+      margin: 1.5rem 0 1rem;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.2;
+    }
+    p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.9rem;
+      border-radius: 0.95rem;
+      background: var(--accent);
+      color: #02150b;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+      box-shadow: 0 22px 44px rgba(108, 243, 200, 0.28);
+    }
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 50px rgba(108, 243, 200, 0.36);
+    }
+    .links {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1>Page not found</h1>
+    <p>The page you're looking for doesn't exist or has been moved.</p>
+    <a class="cta" href="/">Back to home</a>
+    <div class="links">
+      <a href="/#focus">Services</a>
+      <a href="/#process">Process</a>
+      <a href="mailto:hello@28eme.com?subject=Inquiry">Contact</a>
+    </div>
+  </div>
+</body>
+</html>
