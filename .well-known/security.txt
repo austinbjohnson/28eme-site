@@ -1,0 +1,6 @@
+Contact: mailto:hello@28eme.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://28eme.ca/.well-known/security.txt
+Policy: https://28eme.ca/
+Acknowledgments: Thank you for helping keep 28eme secure.
