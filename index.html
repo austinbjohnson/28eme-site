@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>28eme Studio</title>
   <meta name="description" content="28eme is Austin Johnson's consulting studio for automation-first and composite AI engagements.">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://28eme.ca/">
+  <meta property="og:title" content="28eme Studio — Automation-first consulting for composite AI">
+  <meta property="og:description" content="Automation-first consulting for teams operationalizing composite AI. Lean builds with measurable impact, documented for the team that runs it next.">
+  <meta property="og:site_name" content="28eme Studio">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://28eme.ca/">
+  <meta name="twitter:title" content="28eme Studio — Automation-first consulting for composite AI">
+  <meta name="twitter:description" content="Automation-first consulting for teams operationalizing composite AI. Lean builds with measurable impact, documented for the team that runs it next.">
+
+  <!-- Additional Meta Tags -->
+  <link rel="canonical" href="https://28eme.ca/">
+  <meta name="theme-color" content="#04070a">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2304070a'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='700' font-family='sans-serif' text-anchor='middle' fill='%236cf3c8'%3E28%3C/text%3E%3C/svg%3E">
+  <link rel="author" href="/humans.txt">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: dark;
@@ -204,6 +228,21 @@
     a {
       color: var(--accent);
     }
+    .skip-to-content {
+      position: absolute;
+      left: -9999px;
+      z-index: 999;
+      padding: 1rem 1.5rem;
+      background: var(--accent);
+      color: #02150b;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 0 0 0.5rem 0;
+    }
+    .skip-to-content:focus {
+      left: 0;
+      top: 0;
+    }
     @media (max-width: 640px) {
       .cta-group {
         width: 100%;
@@ -219,6 +258,7 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
   <header>
     <div class="container">
       <span class="eyebrow">Automation consulting</span>
@@ -231,9 +271,9 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="container">
-      <section id="focus">
+      <section id="focus" aria-label="Services overview">
         <h2>Where 28eme plugs in</h2>
         <p class="section-lead">Lean builds with measurable impact—each scoped to your workflow and documented for the team that runs it next.</p>
         <div class="grid three">
@@ -264,7 +304,7 @@
         </div>
       </section>
 
-      <section id="process">
+      <section id="process" aria-label="Engagement process">
         <h2>How it runs</h2>
         <p class="section-lead">A lightweight, documented path keeps everyone aligned and ships a working system in weeks, not quarters.</p>
         <ol class="step-list">
@@ -283,7 +323,7 @@
         </ol>
       </section>
 
-      <section id="proof">
+      <section id="proof" aria-label="Case studies and client types">
         <h2>Proof & experiments</h2>
         <div class="card">
           <p class="section-lead" style="margin-bottom:1.4rem;">Case studies stay private until approvals land—request a walkthrough for anonymized artifacts, metrics snapshots, and Loom tours.</p>
@@ -308,7 +348,7 @@
         </div>
       </section>
 
-      <section id="cta">
+      <section id="cta" aria-label="Contact and next steps">
         <div class="card">
           <h2 style="margin-top:0;">Ready for the next build?</h2>
           <p style="color:var(--muted);">Share your scenario and get a scoped experiment or discovery path within 48 hours.</p>
@@ -335,6 +375,36 @@
       const updated = new Date(document.lastModified);
       lastUpdatedEl.textContent = updated.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
     }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "28eme Studio",
+    "url": "https://28eme.ca",
+    "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2304070a'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='700' font-family='sans-serif' text-anchor='middle' fill='%236cf3c8'%3E28%3C/text%3E%3C/svg%3E",
+    "description": "Automation-first consulting for teams operationalizing composite AI. Lean builds with measurable impact, documented for the team that runs it next.",
+    "founder": {
+      "@type": "Person",
+      "name": "Austin Johnson",
+      "url": "https://austinbjohnson.com"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Worldwide"
+    },
+    "serviceType": [
+      "Composite AI builds",
+      "Automation playbooks",
+      "Documentation & enablement"
+    ],
+    "email": "hello@28eme.com",
+    "sameAs": [
+      "https://github.com/austinbjohnson",
+      "https://austinbjohnson.com"
+    ]
+  }
   </script>
 </body>
 </html>

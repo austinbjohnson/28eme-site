@@ -1,0 +1,13 @@
+/* TEAM */
+Founder & Developer: Austin Johnson
+Site: https://austinbjohnson.com
+Location: Remote
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: Inter font, GitHub Pages
+Software: VS Code, Git
+
+/* THANKS */
+Built with intention for automation-first consulting.
+Last update: 2025-12-20
