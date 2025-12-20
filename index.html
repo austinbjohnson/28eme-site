@@ -227,6 +227,21 @@
     a {
       color: var(--accent);
     }
+    .skip-to-content {
+      position: absolute;
+      left: -9999px;
+      z-index: 999;
+      padding: 1rem 1.5rem;
+      background: var(--accent);
+      color: #02150b;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 0 0 0.5rem 0;
+    }
+    .skip-to-content:focus {
+      left: 0;
+      top: 0;
+    }
     @media (max-width: 640px) {
       .cta-group {
         width: 100%;
@@ -242,6 +257,7 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
   <header>
     <div class="container">
       <span class="eyebrow">Automation consulting</span>
@@ -254,9 +270,9 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="container">
-      <section id="focus">
+      <section id="focus" aria-label="Services overview">
         <h2>Where 28eme plugs in</h2>
         <p class="section-lead">Lean builds with measurable impact—each scoped to your workflow and documented for the team that runs it next.</p>
         <div class="grid three">
@@ -287,7 +303,7 @@
         </div>
       </section>
 
-      <section id="process">
+      <section id="process" aria-label="Engagement process">
         <h2>How it runs</h2>
         <p class="section-lead">A lightweight, documented path keeps everyone aligned and ships a working system in weeks, not quarters.</p>
         <ol class="step-list">
@@ -306,7 +322,7 @@
         </ol>
       </section>
 
-      <section id="proof">
+      <section id="proof" aria-label="Case studies and client types">
         <h2>Proof & experiments</h2>
         <div class="card">
           <p class="section-lead" style="margin-bottom:1.4rem;">Case studies stay private until approvals land—request a walkthrough for anonymized artifacts, metrics snapshots, and Loom tours.</p>
@@ -331,7 +347,7 @@
         </div>
       </section>
 
-      <section id="cta">
+      <section id="cta" aria-label="Contact and next steps">
         <div class="card">
           <h2 style="margin-top:0;">Ready for the next build?</h2>
           <p style="color:var(--muted);">Share your scenario and get a scoped experiment or discovery path within 48 hours.</p>
