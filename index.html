@@ -97,16 +97,63 @@
       flex: 1;
       padding-bottom: 4rem;
     }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
     .card {
-      padding: clamp(1.6rem, 3vw, 2.2rem);
+      padding: clamp(1.6rem, 3vw, 2rem);
       border-radius: 1.2rem;
       background: rgba(38, 45, 80, 0.55);
       border: 1px solid var(--border);
       backdrop-filter: blur(9px);
+      display: flex;
+      flex-direction: column;
+      min-height: 10rem;
+    }
+    .card .label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-bottom: 0.6rem;
+    }
+    .card h2 {
+      font-size: 1.35rem;
+      margin: 0 0 0.5rem;
+      line-height: 1.2;
     }
     .card p {
-      margin: 0 0 1.2rem;
+      margin: 0;
       color: var(--muted);
+      font-size: 0.92rem;
+      flex: 1;
+    }
+    .card.accent-gold {
+      border-color: rgba(241, 173, 4, 0.25);
+      background: linear-gradient(135deg, rgba(38, 45, 80, 0.55), rgba(241, 173, 4, 0.08));
+    }
+    .card.accent-gold .label {
+      color: var(--accent);
+    }
+    .cta-section {
+      padding: clamp(1.4rem, 3vw, 1.8rem);
+      border-radius: 1.2rem;
+      background: rgba(38, 45, 80, 0.35);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .cta-section p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
     .cta {
       display: inline-flex;
@@ -170,8 +217,20 @@
 
   <main id="main-content">
     <div class="container">
-      <div class="card">
-        <p>Open to conversations about AI product strategy, orchestration patterns, or collaboration opportunities.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="label">Zapier</span>
+          <h2>Product Manager</h2>
+          <p>Enterprise AI Orchestration, composite AI, and governance at scale.</p>
+        </article>
+        <article class="card accent-gold">
+          <span class="label">Internal Initiative</span>
+          <h2>AI Innovation Lead</h2>
+          <p>Driving a new way of working for PMs with AI-native tooling.</p>
+        </article>
+      </div>
+      <div class="cta-section">
+        <p>Open to conversations about AI product strategy or collaboration.</p>
         <a class="cta" href="mailto:hello@28eme.com?subject=Hello">Get in touch</a>
       </div>
     </div>
@@ -180,6 +239,7 @@
   <footer>
     <div class="links">
       <a href="https://linkedin.com/in/austinbjohnson" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/austinbjohnson" target="_blank" rel="noopener">GitHub</a>
       <a href="https://austinbjohnson.com" target="_blank" rel="noopener">austinbjohnson.com</a>
     </div>
     <div>&copy; <span id="year"></span> Austin Johnson</div>
@@ -204,6 +264,7 @@
     "description": "PM working on Enterprise AI Orchestration at Zapier. Focused on composite AI and governance.",
     "sameAs": [
       "https://linkedin.com/in/austinbjohnson",
+      "https://github.com/austinbjohnson",
       "https://austinbjohnson.com"
     ]
   }
