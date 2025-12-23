@@ -21,8 +21,8 @@
 
   <!-- Additional Meta Tags -->
   <link rel="canonical" href="https://28eme.ca/">
-  <meta name="theme-color" content="#04070a">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2304070a'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='700' font-family='sans-serif' text-anchor='middle' fill='%236cf3c8'%3E28%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d1117'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='700' font-family='sans-serif' text-anchor='middle' fill='%23F1AD04'%3E28%3C/text%3E%3C/svg%3E">
   <link rel="author" href="/humans.txt">
 
   <!-- Fonts -->
@@ -32,11 +32,16 @@
   <style>
     :root {
       color-scheme: dark;
-      --bg: #04070a;
+      /* 28eme brand palette — primary #1C5280 encodes RGB(28,82,128) */
+      --bg: #0d1117;
+      --bg-elevated: #262D50;
       --fg: #f4f7fb;
       --muted: rgba(244, 247, 251, 0.72);
-      --accent: #6cf3c8;
-      --border: rgba(255, 255, 255, 0.14);
+      --primary: #1C5280;
+      --accent: #F1AD04;
+      --secondary: #3B9AFF;
+      --neutral: #696D61;
+      --border: rgba(59, 154, 255, 0.18);
       --max-width: 70rem;
       font-size: 100%;
     }
@@ -46,8 +51,8 @@
     body {
       margin: 0;
       font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-      background: radial-gradient(circle at 20% 0%, rgba(108, 243, 200, 0.18), transparent 55%),
-                  radial-gradient(circle at 110% 10%, rgba(90, 163, 243, 0.2), transparent 60%),
+      background: radial-gradient(circle at 20% 0%, rgba(28, 82, 128, 0.35), transparent 55%),
+                  radial-gradient(circle at 110% 10%, rgba(59, 154, 255, 0.18), transparent 60%),
                   var(--bg);
       color: var(--fg);
       line-height: 1.6;
@@ -70,8 +75,8 @@
       gap: 0.35rem;
       padding: 0.45rem 0.9rem;
       border-radius: 999px;
-      background: rgba(108, 243, 200, 0.12);
-      color: var(--accent);
+      background: rgba(28, 82, 128, 0.35);
+      color: var(--secondary);
       font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -101,15 +106,15 @@
       padding: 0.95rem 1.9rem;
       border-radius: 0.95rem;
       background: var(--accent);
-      color: #02150b;
+      color: #1a1400;
       font-weight: 600;
       text-decoration: none;
       transition: transform 160ms ease, box-shadow 160ms ease;
-      box-shadow: 0 22px 44px rgba(108, 243, 200, 0.28);
+      box-shadow: 0 22px 44px rgba(241, 173, 4, 0.25);
     }
     .cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 24px 50px rgba(108, 243, 200, 0.36);
+      box-shadow: 0 24px 50px rgba(241, 173, 4, 0.35);
     }
     .cta.secondary {
       background: transparent;
@@ -131,7 +136,7 @@
     .card {
       padding: clamp(1.8rem, 3vw, 2.6rem);
       border-radius: 1.4rem;
-      background: rgba(12, 18, 26, 0.75);
+      background: rgba(38, 45, 80, 0.55);
       border: 1px solid var(--border);
       backdrop-filter: blur(9px);
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
@@ -178,7 +183,7 @@
       position: absolute;
       left: 0.3rem;
       top: 0;
-      color: var(--accent);
+      color: var(--secondary);
       font-size: 1.1rem;
       line-height: 1;
     }
@@ -195,7 +200,7 @@
       border: 1px solid var(--border);
       border-radius: 1.4rem;
       padding: 1.4rem 1.6rem 1.3rem 3.4rem;
-      background: rgba(12, 18, 26, 0.75);
+      background: rgba(38, 45, 80, 0.55);
       position: relative;
       backdrop-filter: blur(9px);
     }
@@ -226,7 +231,7 @@
       background: rgba(3, 4, 8, 0.55);
     }
     a {
-      color: var(--accent);
+      color: var(--secondary);
     }
     .skip-to-content {
       position: absolute;
@@ -234,7 +239,7 @@
       z-index: 999;
       padding: 1rem 1.5rem;
       background: var(--accent);
-      color: #02150b;
+      color: #1a1400;
       text-decoration: none;
       font-weight: 600;
       border-radius: 0 0 0.5rem 0;
@@ -383,7 +388,7 @@
     "@type": "ProfessionalService",
     "name": "28eme Studio",
     "url": "https://28eme.ca",
-    "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2304070a'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='700' font-family='sans-serif' text-anchor='middle' fill='%236cf3c8'%3E28%3C/text%3E%3C/svg%3E",
+    "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d1117'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='700' font-family='sans-serif' text-anchor='middle' fill='%23F1AD04'%3E28%3C/text%3E%3C/svg%3E",
     "description": "Automation-first consulting for teams operationalizing composite AI. Lean builds with measurable impact, documented for the team that runs it next.",
     "founder": {
       "@type": "Person",
