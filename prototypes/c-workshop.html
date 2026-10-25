@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>28eme</title>
+  <meta name="description" content="28eme — Austin Johnson's workshop for automation consulting and small software products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Option C — Workshop: big wordmark, each product gets its own solid block. Loud but flat: no blur, no glow. */
+    :root {
+      --bg: #ece9e2;
+      --fg: #141414;
+      --muted: #55524c;
+      --blue: #1C5280;  /* 28,82,128 */
+      --gold: #F1AD04;
+      --line: #141414;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #121212; --fg: #efece6; --muted: #a29e96; --line: #efece6; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 400 1.05rem/1.5 "Space Grotesk", system-ui, sans-serif; }
+    .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; }
+    .top { display: flex; justify-content: space-between; padding: 1.25rem 0; font-size: 0.9rem; }
+    .top a { color: var(--fg); }
+    .wordmark { font-size: clamp(6rem, 26vw, 20rem); font-weight: 700; line-height: 0.8; letter-spacing: -0.06em; margin: 2rem 0 0; }
+    .wordmark sup { font-size: 0.32em; letter-spacing: -0.02em; vertical-align: 1.55em; margin-left: 0.04em; }
+    .lede { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-top: 2px solid var(--line); margin-top: 2rem; padding: 1.5rem 0 4rem; }
+    .lede p { margin: 0; font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.35; max-width: 30rem; }
+    .lede p + p { color: var(--muted); font-size: 1rem; line-height: 1.5; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 2px solid var(--line); }
+    .tile { padding: 1.5rem; min-height: 19rem; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: inherit; border-right: 2px solid var(--line); }
+    .tile:last-child { border-right: 0; }
+    .tile .n { font-size: 0.85rem; }
+    .tile h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1; letter-spacing: -0.03em; margin: 0 0 0.75rem; font-weight: 700; }
+    .tile p { margin: 0; max-width: 20rem; }
+    .tile .go { margin-top: 1.25rem; font-weight: 500; }
+    a.tile:hover .go { text-decoration: underline; text-underline-offset: 0.2em; }
+    .t-focus { background: var(--gold); color: #141414; }
+    .t-split { background: var(--blue); color: #fff; }
+    .t-consult { background: transparent; }
+    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 2rem 0 3rem; font-size: 0.9rem; color: var(--muted); }
+    footer a { color: var(--fg); }
+    @media (max-width: 52rem) {
+      .lede { grid-template-columns: 1fr; gap: 1rem; }
+      .grid { grid-template-columns: 1fr; }
+      .tile { border-right: 0; border-bottom: 2px solid var(--line); min-height: 14rem; }
+      .tile:last-child { border-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top"><span>Austin Johnson's workshop</span><a href="mailto:hello@28eme.ca">hello@28eme.ca</a></div>
+
+    <div class="wordmark" aria-label="28eme">28<sup>eme</sup></div>
+
+    <div class="lede">
+      <p>Two small products and a consulting practice, run by one person.</p>
+      <p>I build workflow automation and AI products for a living. 28eme is where I ship my own, and help a few teams a year with theirs.</p>
+    </div>
+
+    <div class="grid">
+      <!-- TODO: real one-liners and URLs -->
+      <a class="tile t-focus" href="#">
+        <span class="n">01 — Product</span>
+        <div><h2>Focus Please</h2><p>A focus timer that blocks what distracts you.</p><div class="go">Open Focus Please →</div></div>
+      </a>
+      <a class="tile t-split" href="#">
+        <span class="n">02 — Product</span>
+        <div><h2>WiseSplit</h2><p>Split shared costs without the spreadsheet.</p><div class="go">Open WiseSplit →</div></div>
+      </a>
+      <a class="tile t-consult" href="mailto:hello@28eme.ca?subject=Automation%20project">
+        <span class="n">03 — Service</span>
+        <div><h2>Automation consulting</h2><p>I map a process, automate it in Zapier or code, and hand over docs your team can maintain.</p><div class="go">Describe your process →</div></div>
+      </a>
+    </div>
+
+    <footer>
+      <span>© 2026 28eme</span>
+      <span><a href="https://austinbjohnson.com">austinbjohnson.com</a> · <a href="https://github.com/austinbjohnson">GitHub</a> · <a href="https://linkedin.com/in/austinbjohnson">LinkedIn</a></span>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>28eme</title>
+  <meta name="description" content="28eme is a small holding company for automation consulting and software products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Option B — Registry: a holding company's index. Grid, a table, the brand blue as the one color. */
+    :root {
+      --bg: #ffffff;
+      --fg: #111418;
+      --muted: #5d6570;
+      --line: #e3e6ea;
+      --brand: #1C5280; /* RGB(28,82,128) */
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0f1215; --fg: #e8ebee; --muted: #8a939d; --line: #252a30; --brand: #6aa3d6; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 400 1rem/1.55 "IBM Plex Sans", system-ui, sans-serif; }
+    .wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.25rem; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+    header { display: flex; justify-content: space-between; align-items: baseline; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+    .mark { font-weight: 600; letter-spacing: -0.01em; text-decoration: none; color: var(--fg); }
+    .mark b { color: var(--brand); font-weight: 600; }
+    nav a { color: var(--muted); text-decoration: none; margin-left: 1.25rem; font-size: 0.9rem; }
+    nav a:hover { color: var(--fg); }
+    .intro { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; padding: 4.5rem 0 4rem; border-bottom: 1px solid var(--line); }
+    .intro .k { color: var(--muted); font-size: 0.8rem; }
+    .intro h1 { margin: 0; font-size: clamp(1.6rem, 3.2vw, 2.25rem); line-height: 1.25; font-weight: 500; letter-spacing: -0.015em; max-width: 34rem; }
+    section { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; padding: 3rem 0; border-bottom: 1px solid var(--line); }
+    section > h2 { margin: 0; font-size: 0.8rem; font-weight: 500; color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    th { text-align: left; font-weight: 500; color: var(--muted); font-size: 0.75rem; padding: 0 0 0.6rem; border-bottom: 1px solid var(--line); }
+    td { padding: 1rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+    td:first-child { font-weight: 600; width: 30%; }
+    td a { color: var(--fg); text-decoration: none; }
+    td a:hover { color: var(--brand); }
+    .status { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+    .status::before { content: ""; display: inline-block; width: 0.45rem; height: 0.45rem; border-radius: 50%; background: var(--brand); margin-right: 0.45rem; vertical-align: 0.05rem; }
+    .status.beta::before { background: transparent; border: 1px solid var(--brand); }
+    .body p { margin: 0 0 1rem; max-width: 36rem; }
+    ol { margin: 1.5rem 0 0; padding: 0; list-style: none; counter-reset: s; max-width: 36rem; }
+    ol li { counter-increment: s; display: grid; grid-template-columns: 2.5rem 1fr; padding: 0.6rem 0; border-top: 1px solid var(--line); }
+    ol li::before { content: counter(s, decimal-leading-zero); font-family: "IBM Plex Mono", monospace; color: var(--brand); font-size: 0.85rem; padding-top: 0.1rem; }
+    .contact a { color: var(--brand); font-weight: 500; }
+    footer { padding: 2rem 0 3rem; color: var(--muted); font-size: 0.8rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    footer a { color: inherit; }
+    @media (max-width: 44rem) {
+      .intro, section { grid-template-columns: 1fr; gap: 1rem; }
+      nav { display: none; }
+      td:first-child { width: auto; }
+      .hide-sm { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="mark" href="/">28<b>eme</b></a>
+      <nav><a href="#products">Products</a><a href="#consulting">Consulting</a><a href="#contact">Contact</a></nav>
+    </header>
+
+    <div class="intro">
+      <div class="k mono">28eme · Canada</div>
+      <h1>A small company that builds automation for other teams and software for itself.</h1>
+    </div>
+
+    <section id="products">
+      <h2 class="mono">Products</h2>
+      <table>
+        <thead><tr><th>Name</th><th>What it does</th><th class="hide-sm">Status</th></tr></thead>
+        <tbody>
+          <!-- TODO: replace one-liners, URLs and status with the real ones -->
+          <tr><td><a href="#">Focus Please</a></td><td>A focus timer that blocks what distracts you.</td><td class="hide-sm"><span class="status">Live</span></td></tr>
+          <tr><td><a href="#">WiseSplit</a></td><td>Split shared costs without the spreadsheet.</td><td class="hide-sm"><span class="status beta">Beta</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="consulting">
+      <h2 class="mono">Consulting</h2>
+      <div class="body">
+        <p>Automation projects for operations and product teams who know a process is costing them hours but don't have the people to fix it.</p>
+        <ol>
+          <li>Map the process as it actually runs today.</li>
+          <li>Build the automation in Zapier, or in code where Zapier stops.</li>
+          <li>Hand over docs and an owner, so it keeps working after I leave.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="mono">Contact</h2>
+      <div class="body"><p><a href="mailto:hello@28eme.ca">hello@28eme.ca</a> — run by <a href="https://austinbjohnson.com">Austin Johnson</a>.</p></div>
+    </section>
+
+    <footer>
+      <span>© 2026 28eme</span>
+      <span><a href="https://github.com/austinbjohnson">GitHub</a> · <a href="https://linkedin.com/in/austinbjohnson">LinkedIn</a></span>
+    </footer>
+  </div>
+</body>
+</html>

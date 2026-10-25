@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>28eme</title>
+  <meta name="description" content="28eme is Austin Johnson's holding company for automation consulting and small software products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <style>
+    /* Option A — Ledger: one column of text, like a letterhead. No cards, no gradients. */
+    :root {
+      --paper: #f6f3ec;
+      --ink: #1d1c1a;
+      --quiet: #6b675f;
+      --rule: #d9d3c5;
+      --link: #1C5280; /* the 28,82,128 brand blue, used only for links */
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #161513; --ink: #ece8df; --quiet: #9a958a; --rule: #34312b; --link: #8db8de; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 400 1.1875rem/1.6 "Newsreader", Georgia, serif;
+    }
+    main { max-width: 36rem; margin: 0 auto; padding: 5rem 1.25rem 4rem; }
+    h1 { font-size: 1rem; font-weight: 500; margin: 0 0 2.5rem; letter-spacing: 0.02em; }
+    h2 {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--quiet); margin: 3rem 0 0.75rem;
+    }
+    p { margin: 0 0 1rem; }
+    a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+    dl { margin: 0; }
+    .row { display: grid; grid-template-columns: 8.5rem 1fr; gap: 1rem; padding: 0.9rem 0; border-top: 1px solid var(--rule); }
+    .row:last-child { border-bottom: 1px solid var(--rule); }
+    dt { font-weight: 500; }
+    dd { margin: 0; color: var(--quiet); }
+    dd span { color: var(--ink); }
+    footer { margin-top: 4rem; font-size: 0.95rem; color: var(--quiet); }
+    footer a { color: inherit; }
+    @media (max-width: 30rem) { .row { grid-template-columns: 1fr; gap: 0.15rem; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>28eme</h1>
+
+    <p>28eme is where I keep the things I build outside my day job: automation consulting for small teams, and a few software products I run myself.</p>
+    <p>I'm Austin Johnson. I've spent my career on workflow automation and AI products, most recently as a product manager at Zapier.</p>
+
+    <h2>Products</h2>
+    <dl>
+      <div class="row">
+        <dt><a href="#">Focus Please</a></dt>
+        <dd><span>A focus timer that blocks what distracts you.</span> In use. <!-- TODO: real one-liner + URL --></dd>
+      </div>
+      <div class="row">
+        <dt><a href="#">WiseSplit</a></dt>
+        <dd><span>Split shared costs without the spreadsheet.</span> In beta. <!-- TODO: real one-liner + URL --></dd>
+      </div>
+    </dl>
+
+    <h2>Consulting</h2>
+    <p>I take on a small number of automation projects each year: mapping a messy process, building it in Zapier or code, and leaving the team with documentation they can maintain without me.</p>
+    <p>If that's useful, email <a href="mailto:hello@28eme.ca">hello@28eme.ca</a> with a sentence about the process you want fixed.</p>
+
+    <footer>
+      <a href="https://austinbjohnson.com">austinbjohnson.com</a> · <a href="https://github.com/austinbjohnson">GitHub</a> · <a href="https://linkedin.com/in/austinbjohnson">LinkedIn</a>
+    </footer>
+  </main>
+</body>
+</html>
