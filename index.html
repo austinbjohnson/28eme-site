@@ -3,276 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>28eme Studio</title>
-  <meta name="description" content="Austin Johnson — PM working on Enterprise AI Orchestration at Zapier. Composite AI, governance, and automation at scale.">
+  <title>28eme</title>
+  <meta name="description" content="28eme is Austin Johnson's workshop: Focus Please, WiseSplit, and automation consulting for small teams.">
 
-  <!-- Open Graph / Social Media Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://28eme.ca/">
-  <meta property="og:title" content="28eme Studio — Austin Johnson">
-  <meta property="og:description" content="PM working on Enterprise AI Orchestration at Zapier. Composite AI, governance, and automation at scale.">
-  <meta property="og:site_name" content="28eme Studio">
-
-  <!-- Twitter Card Meta Tags -->
+  <meta property="og:title" content="28eme">
+  <meta property="og:description" content="Two agent-friendly products and an automation consulting practice, run by one person.">
+  <meta property="og:site_name" content="28eme">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="https://28eme.ca/">
-  <meta name="twitter:title" content="28eme Studio — Austin Johnson">
-  <meta name="twitter:description" content="PM working on Enterprise AI Orchestration at Zapier. Composite AI, governance, and automation at scale.">
+  <meta name="twitter:title" content="28eme">
+  <meta name="twitter:description" content="Two agent-friendly products and an automation consulting practice, run by one person.">
 
-  <!-- Additional Meta Tags -->
   <link rel="canonical" href="https://28eme.ca/">
-  <meta name="theme-color" content="#0d1117">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d1117'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='700' font-family='sans-serif' text-anchor='middle' fill='%23F1AD04'%3E28%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#ece9e2">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23141414'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='700' font-family='sans-serif' text-anchor='middle' fill='%23F1AD04'%3E28%3C/text%3E%3C/svg%3E">
   <link rel="author" href="/humans.txt">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
+    /* Big wordmark, one solid block per product. Flat on purpose: no blur, no glow, no gradients. */
     :root {
-      color-scheme: dark;
-      /* 28eme brand palette — primary #1C5280 encodes RGB(28,82,128) */
-      --bg: #0d1117;
-      --bg-elevated: #262D50;
-      --fg: #f4f7fb;
-      --muted: rgba(244, 247, 251, 0.72);
-      --primary: #1C5280;
-      --accent: #F1AD04;
-      --secondary: #3B9AFF;
-      --neutral: #696D61;
-      --border: rgba(59, 154, 255, 0.18);
-      --max-width: 48rem;
-      font-size: 100%;
+      --bg: #ece9e2;
+      --fg: #141414;
+      --muted: #55524c;
+      --blue: #1C5280;  /* 28,82,128 */
+      --gold: #F1AD04;
+      --line: #141414;
     }
-    *, *::before, *::after {
-      box-sizing: border-box;
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #121212; --fg: #efece6; --muted: #a29e96; --line: #efece6; }
     }
-    body {
-      margin: 0;
-      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-      background: radial-gradient(circle at 20% 0%, rgba(28, 82, 128, 0.35), transparent 55%),
-                  radial-gradient(circle at 110% 10%, rgba(59, 154, 255, 0.18), transparent 60%),
-                  var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .container {
-      margin: 0 auto;
-      max-width: var(--max-width);
-      width: 100%;
-      padding: 0 1.5rem;
-    }
-    header {
-      padding: clamp(4rem, 12vw, 8rem) 0 clamp(3rem, 8vw, 6rem);
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.4rem 0.85rem;
-      border-radius: 999px;
-      background: rgba(28, 82, 128, 0.35);
-      color: var(--secondary);
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    h1 {
-      margin: 1.6rem 0 1rem;
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-    }
-    .lead {
-      color: var(--muted);
-      font-size: 1.1rem;
-      margin: 0;
-      max-width: 38rem;
-    }
-    .studio-note {
-      margin: 1.5rem 0 0;
-      font-size: 0.88rem;
-      color: var(--neutral);
-    }
-    main {
-      flex: 1;
-      padding-bottom: 4rem;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-      gap: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .card {
-      padding: clamp(1.6rem, 3vw, 2rem);
-      border-radius: 1.2rem;
-      background: rgba(38, 45, 80, 0.55);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(9px);
-      display: flex;
-      flex-direction: column;
-      min-height: 10rem;
-    }
-    .card .label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--secondary);
-      margin-bottom: 0.6rem;
-    }
-    .card h2 {
-      font-size: 1.35rem;
-      margin: 0 0 0.5rem;
-      line-height: 1.2;
-    }
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-      flex: 1;
-    }
-    .card.accent-gold {
-      border-color: rgba(241, 173, 4, 0.25);
-      background: linear-gradient(135deg, rgba(38, 45, 80, 0.55), rgba(241, 173, 4, 0.08));
-    }
-    .card.accent-gold .label {
-      color: var(--accent);
-    }
-    .cta-section {
-      padding: clamp(1.4rem, 3vw, 1.8rem);
-      border-radius: 1.2rem;
-      background: rgba(38, 45, 80, 0.35);
-      border: 1px solid var(--border);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .cta-section p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.85rem 1.6rem;
-      border-radius: 0.85rem;
-      background: var(--accent);
-      color: #1a1400;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 160ms ease, box-shadow 160ms ease;
-      box-shadow: 0 18px 36px rgba(241, 173, 4, 0.22);
-    }
-    .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 42px rgba(241, 173, 4, 0.32);
-    }
-    footer {
-      padding: 1.5rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.85rem;
-      color: var(--muted);
-      text-align: center;
-      background: rgba(3, 4, 8, 0.55);
-    }
-    footer .links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 0.6rem;
-    }
-    a {
-      color: var(--secondary);
-    }
-    .skip-to-content {
-      position: absolute;
-      left: -9999px;
-      z-index: 999;
-      padding: 1rem 1.5rem;
-      background: var(--accent);
-      color: #1a1400;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 0 0 0.5rem 0;
-    }
-    .skip-to-content:focus {
-      left: 0;
-      top: 0;
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 400 1.05rem/1.5 "Space Grotesk", system-ui, sans-serif; }
+    .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; }
+    .top { display: flex; justify-content: space-between; padding: 1.25rem 0; font-size: 0.9rem; }
+    .top a { color: var(--fg); }
+    .wordmark { font-size: clamp(6rem, 26vw, 20rem); font-weight: 700; line-height: 0.8; letter-spacing: -0.06em; margin: 2rem 0 0; }
+    .wordmark sup { font-size: 0.32em; letter-spacing: -0.02em; vertical-align: 1.55em; margin-left: 0.04em; }
+    .lede { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-top: 2px solid var(--line); margin-top: 2rem; padding: 1.5rem 0 4rem; }
+    .lede p { margin: 0; font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.35; max-width: 30rem; }
+    .lede p + p { color: var(--muted); font-size: 1rem; line-height: 1.5; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 2px solid var(--line); }
+    .tile { padding: 1.5rem; min-height: 19rem; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: inherit; border-right: 2px solid var(--line); }
+    .tile:last-child { border-right: 0; }
+    .tile .n { font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .tile h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1; letter-spacing: -0.03em; margin: 0 0 0.75rem; font-weight: 700; }
+    .tile p { margin: 0; max-width: 20rem; }
+    .tile .go { margin-top: 1.25rem; font-weight: 500; }
+    a.tile:hover .go { text-decoration: underline; text-underline-offset: 0.2em; }
+    .t-focus { background: var(--gold); color: #141414; }
+    .t-split { background: var(--blue); color: #fff; }
+    .t-consult { background: transparent; }
+    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 2rem 0 3rem; font-size: 0.9rem; color: var(--muted); }
+    footer a { color: var(--fg); }
+    @media (max-width: 52rem) {
+      .lede { grid-template-columns: 1fr; gap: 1rem; }
+      .grid { grid-template-columns: 1fr; }
+      .tile { border-right: 0; border-bottom: 2px solid var(--line); min-height: 14rem; }
+      .tile:last-child { border-bottom: 0; }
     }
   </style>
 </head>
 <body>
-  <a href="#main-content" class="skip-to-content">Skip to main content</a>
-  <header>
-    <div class="container">
-      <span class="eyebrow">28eme Studio</span>
-      <h1>PM building Enterprise AI Orchestration at Zapier.</h1>
-      <p class="lead">Focused on composite AI and governance—helping teams ship AI workflows that stay accountable at scale.</p>
-      <p class="studio-note">28eme is the Modern PM and Automation Studio founded by Austin Johnson.</p>
-    </div>
-  </header>
+  <div class="wrap">
+    <div class="top"><span>Austin Johnson's workshop</span><a href="mailto:hello@28eme.ca">hello@28eme.ca</a></div>
 
-  <main id="main-content">
-    <div class="container">
-      <div class="cards">
-        <article class="card">
-          <span class="label">Zapier</span>
-          <h2>Product Manager</h2>
-          <p>Enterprise AI Orchestration, composite AI, and governance at scale.</p>
-        </article>
-        <article class="card accent-gold">
-          <span class="label">Zapier</span>
-          <h2>AI Innovation Lead</h2>
-          <p>Driving a new way of working for PMs with AI-native tooling.</p>
-        </article>
-      </div>
-      <div class="cta-section">
-        <p>Open to conversations about AI product strategy or collaboration.</p>
-        <a class="cta" href="mailto:hello@28eme.com?subject=Hello">Get in touch</a>
-      </div>
-    </div>
-  </main>
+    <div class="wordmark" aria-label="28eme">28<sup>eme</sup></div>
 
-  <footer>
-    <div class="links">
-      <a href="https://linkedin.com/in/austinbjohnson" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/austinbjohnson" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://austinbjohnson.com" target="_blank" rel="noopener">austinbjohnson.com</a>
+    <div class="lede">
+      <p>Two agent-friendly products and a consulting practice, run by one person.</p>
+      <p>I build workflow automation and AI products for a living. 28eme is where I ship my own, and help a few teams a year with theirs.</p>
     </div>
-    <div>&copy; <span id="year"></span> Austin Johnson</div>
-  </footer>
 
+    <div class="grid">
+      <a class="tile t-focus" href="https://focusplease.ca">
+        <span class="n">01 — Product</span>
+        <div><h2>Focus Please</h2><p>An agent-friendly to-do list that helps you focus on your most impactful work.</p><div class="go">focusplease.ca →</div></div>
+      </a>
+      <a class="tile t-split" href="https://wisesplit.ca">
+        <span class="n">02 — Product</span>
+        <div><h2>WiseSplit</h2><p>An agent-friendly expense splitter for groups. No subscription, and no ad every time you open it.</p><div class="go">wisesplit.ca →</div></div>
+      </a>
+      <a class="tile t-consult" href="mailto:hello@28eme.ca?subject=Automation%20project">
+        <span class="n">03 — Service</span>
+        <div><h2>Automation consulting</h2><p>I map a process, automate it with the tools you already use or with code, and hand over docs your team can maintain.</p><div class="go">Describe your process →</div></div>
+      </a>
+    </div>
+
+    <footer>
+      <span>© <span id="year">2026</span> 28eme</span>
+      <span><a href="https://austinbjohnson.com">austinbjohnson.com</a> · <a href="https://github.com/austinbjohnson">GitHub</a> · <a href="https://linkedin.com/in/austinbjohnson">LinkedIn</a></span>
+    </footer>
+  </div>
   <script>
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Austin Johnson",
+    "@type": "Organization",
+    "name": "28eme",
     "url": "https://28eme.ca",
-    "jobTitle": "Product Manager",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Zapier"
-    },
-    "description": "PM working on Enterprise AI Orchestration at Zapier. Focused on composite AI and governance.",
-    "sameAs": [
-      "https://linkedin.com/in/austinbjohnson",
-      "https://github.com/austinbjohnson",
-      "https://austinbjohnson.com"
-    ]
+    "email": "hello@28eme.ca",
+    "founder": { "@type": "Person", "name": "Austin Johnson", "url": "https://austinbjohnson.com" },
+    "sameAs": ["https://github.com/austinbjohnson", "https://linkedin.com/in/austinbjohnson"]
   }
   </script>
 </body>
