@@ -49,7 +49,6 @@
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 2px solid var(--line); }
     .tile { padding: 1.5rem; min-height: 19rem; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: inherit; border-right: 2px solid var(--line); }
     .tile:last-child { border-right: 0; }
-    .soon { opacity: 0.75; }
     .tile .n { font-size: 0.85rem; margin-bottom: 1.5rem; }
     .tile h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1; letter-spacing: -0.03em; margin: 0 0 0.75rem; font-weight: 700; }
     .tile p { margin: 0; max-width: 20rem; }
@@ -84,11 +83,10 @@
         <span class="n">01 — Product</span>
         <div><h2>Focus Please</h2><p>An agent-friendly to-do list that helps you focus on your most impactful work.</p><div class="go">focusplease.ca →</div></div>
       </a>
-      <!-- TODO: swap this div for <a class="tile t-split" href="..."> once WiseSplit has a public URL -->
-      <div class="tile t-split">
+      <a class="tile t-split" href="https://wisesplit.ca">
         <span class="n">02 — Product</span>
-        <div><h2>WiseSplit</h2><p>An agent-friendly expense splitter for groups. No subscription, and no ad every time you open it.</p><div class="go soon">Coming soon</div></div>
-      </div>
+        <div><h2>WiseSplit</h2><p>An agent-friendly expense splitter for groups. No subscription, and no ad every time you open it.</p><div class="go">wisesplit.ca →</div></div>
+      </a>
       <a class="tile t-consult" href="mailto:hello@28eme.ca?subject=Automation%20project">
         <span class="n">03 — Service</span>
         <div><h2>Automation consulting</h2><p>I map a process, automate it with the tools you already use or with code, and hand over docs your team can maintain.</p><div class="go">Describe your process →</div></div>
