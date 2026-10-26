@@ -1,0 +1,13 @@
+# Repo-only files: never served to visitors
+wrangler.jsonc
+.assetsignore
+.gitignore
+.git
+.github
+node_modules
+AGENTS.md
+CLAUDE.md
+CNAME
+README.md
+handoff.md
+docs
