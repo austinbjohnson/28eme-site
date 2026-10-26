@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "28eme-site",
+  "account_id": "e185e370ce62621cd51254db72065599",
+  "compatibility_date": "2026-10-26",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": false,
+  "preview_urls": false
+}

@@ -8,3 +8,6 @@ dist/
 
 # Logs
 *.log
+
+# Wrangler local dev cache
+.wrangler/
